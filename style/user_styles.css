@@ -1,0 +1,158 @@
+body {
+    margin-left:10%;
+    margin-right:10%;
+}
+
+#wrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10em 10em 15em 5em;
+    grid-template-areas: 
+        "banner"
+        "accinfo"
+        "uploads"
+        "footer";
+    grid-row-gap: 10px;
+}
+
+div#banner {
+    grid-area: banner;
+    background: linear-gradient(to right, blueviolet, lightblue);
+    /*width: 100%;
+    height: 10em;
+    position: relative;
+    margin-bottom: 10px;*/
+}
+
+#print > p {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 1em;
+    font-family: cursive;
+}
+
+#stud_info_container {
+    grid-area: accinfo;
+    display: grid;
+    border: 1px solid black;
+    padding: 10px;
+    /*    width: auto;
+    height: 10em;
+    margin-bottom: 10px;*/
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "profile name balance"
+        "profile . ."
+        "profile idnumber history"
+        "editprof . .";
+    grid-column-gap: 10px;
+}
+
+#prof_img {
+    grid-area: profile;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#profile_image {
+    width: 100px;
+    height: 100px;
+}
+
+#edit_button {
+    grid-area: editprof;
+    width: 100px;
+    margin: auto;
+}
+
+#name {
+    grid-area: name;
+    border: 1px solid black;
+    /*width: 30%;
+    height: 50px;
+    margin-left: 20%;
+    margin-top: -125px;*/
+}
+
+#stud_id {
+    border: 1px solid black;
+    grid-area: idnumber;
+    /*width: 30%;
+    height: 50px;
+    margin-left: 20%;
+    margin-top: 3px;*/
+}
+
+
+#balance {
+    border: 1px solid black;
+    grid-area: balance;
+    /*    width: 30%;
+    height: 50px;
+    margin-top: -106px;
+    margin-left: 65%;*/
+}
+#balance > p{
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+#history {
+    grid-area: history;
+    margin: auto;
+    /*    margin-top: 10px;;
+    margin-left: 65%;
+    width: 10%;
+    height: 50px;*/
+}
+
+#main_body {
+    grid-area: uploads;
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        ". uptext ."
+        ". upicon .";
+    grid-row-gap: 10px;
+}
+
+#upload_container{
+    grid-area: uptext;
+    margin: auto;
+}
+
+
+#upload_button {
+    grid-area: upicon;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    margin: auto;
+    border-bottom-style: ridge;
+    border-bottom-color: black;
+}
+
+@media only screen and (max-width: 720px) {
+    #stud_info_container {
+        grid-area: accinfo;
+        display: grid;
+        border: 1px solid black;
+        padding: 10px;
+        /*    width: auto;
+        height: 10em;
+        margin-bottom: 10px;*/
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-areas: 
+            "profile name "
+            "profile idnumber"
+            "profile balance"
+            "editprof history";
+        grid-column-gap: 10px;
+        grid-row-gap: 3px;
+    }
+
+}
